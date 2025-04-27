@@ -12,11 +12,11 @@ const fieldValidators = {
     name: z
         .string()
         .min(2, { message: "Must be at least 2 characters" })
-        .max(50, { message: "Must be at most 50 characters" }),
+        .max(100, { message: "Must be at most 100 characters" }),
     address: z
         .string()
         .min(2, { message: "Must be at least 2 characters" })
-        .max(70, { message: "Must be between 2 and 70 characters" }),
+        .max(150, { message: "Must be between 2 and 150 characters" }),
     zipCode: z
         .string()
         .min(2, { message: "Must be between 2 and 20 characters" })
@@ -33,7 +33,7 @@ const fieldValidators = {
         .string()
         .email({ message: "Email must be a valid email" })
         .min(5, { message: "Must be between 5 and 30 characters" })
-        .max(30, { message: "Must be between 5 and 30 characters" }),
+        .max(64, { message: "Must be between 5 and 64 characters" }),
     phone: z
         .string()
         .min(1, { message: "Must be between 1 and 50 characters" })
